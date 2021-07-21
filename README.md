@@ -20,7 +20,7 @@ The following environment variables must be set:
 ## Run Docker image
 
 ```commandline
-docker run -e PUBSUB_PROJECT_ID=project-test -e PUBSUB_LISTEN_ADDRESS=0.0.0.0:8432 -p 8432:8432 mandlon/pubsub-emulator:latest
+docker run -e PUBSUB_PROJECT_ID=project-test -e PUBSUB_LISTEN_ADDRESS=0.0.0.0:8432 -p 8432:8432 3apag/pubsub-emulator:latest
 ```
 
 ## Creating a Pub/Sub emulator with Docker Compose
@@ -38,7 +38,7 @@ volumes:
 
 services:
   pubsub:
-    image: mandlon/pubsub-emulator
+    image: 3apag/pubsub-emulator
     environment:
       - PUBSUB_PROJECT_ID=project-test
       - PUBSUB_LISTEN_ADDRESS=0.0.0.0:8432
