@@ -1,0 +1,17 @@
+name: Verify Docker Image
+
+on:
+  pull_request:
+    branches:
+      - develop
+env:
+  IMAGE: pubsub-emulator
+  ORGANIZATION: 3apag
+
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag $ORGANIZATION/$IMAGE:latest
