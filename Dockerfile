@@ -1,5 +1,5 @@
 # Use google cloud sdk
-FROM google/cloud-sdk:356.0.0-alpine
+FROM google/cloud-sdk:359.0.0-alpine
 
 MAINTAINER florian-3ap
 
